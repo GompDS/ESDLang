@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using static ESDLang.EzSemble.AST;
 using static ESDLang.EzSemble.Common;
 using static ESDLang.EzSemble.EzSembleContext;
-using static SoulsFormats.MSBAC6.Event;
 
 namespace ESDLang.EzSemble
 {

@@ -43,7 +43,7 @@ namespace ESDLang.Adapter
         /// </summary>
         public Dictionary<long, string> StateGroupNames;
 
-        public DCX.Type Compression = DCX.Type.None;
+        public DCX.CompressionInfo Compression = new DCX.NoCompressionInfo();
         internal string LastSavedHash;
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace ESDLang.Adapter
             {
                 BinaryReaderEx br = new BinaryReaderEx(false, stream);
                 ESDL file = new ESDL();
-                br = SFUtil.GetDecompressedBR(br, out file.Compression);
+                br = SFUtil.GetDecompressedBinaryReader(br, out file.Compression);
                 file.ReadWithContext(br, context);
                 return file;
             }
